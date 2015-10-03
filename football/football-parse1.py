@@ -4,7 +4,7 @@ fh = open('football.csv','r')
 words3 = []
 diff_score = None
 for line in fh:
-	print line.__repr__()
+#	print line.__repr__()
 	a = list(line.split('\r'))
 	for i in a:
 		words = i.split(',')
