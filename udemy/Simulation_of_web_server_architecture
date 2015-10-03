@@ -1,0 +1,30 @@
+#!/usr/bin/python
+#Section:3 - Simulation of Web Server Architecture
+
+"""
+Simulation of Web App Architecture
+Service: The Russian Peasant's Algorithm
+
+Architecture Include:
+- App Computer (Modules)
+- Database (--) --> Russina Peasant Algorithm
+- Load Balancer (algorithm)
+"""
+## : Modules
+##: A module is a file containing Python definitions and statements
+##: The file name is the module name with the suffix .py appended
+#import computer1, computer2 
+#import computer3 as com3
+
+## Folder Name
+### Database --> utils.py
+### from Database import utils as db_utils
+### Handlers --> utils.py
+### from Handlers import utils as h_utils
+
+## computer1.py -- module
+##def printName():
+##	print str(__Name__)   ## This will return the module name -> computer1
+##import computer1
+##computer1.printName()
+## The above will return computer1
