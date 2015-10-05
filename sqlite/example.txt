@@ -1,0 +1,74 @@
+Here is an example that combines both GUI and sqlite lecture
+
+create two files db.py and form.py
+
+add the following code:
+
+#db.py
+
+import sqlite3 as sql
+
+db = sql.connect('test.db')
+
+#cursor object
+
+db_cursor=db.cursor()
+
+drop='DROP table if exists users'
+
+create='CREATE TABLE users(username TEXT, password TEXT)'
+
+db_cursor.execute(drop)
+
+db_cursor.execute(create)
+
+def InsertDB(username,password):
+
+insert='INSERT INTO users (username,password) VALUES("'+username+'","'+password+'")'
+
+select='SELECT username,password FROM users'
+
+db_cursor.execute(insert)
+
+db_cursor.execute(select)
+
+for x in db_cursor:
+
+print x
+
+db.commit()
+
+--------------------------
+
+#form.py GUI interface for form data
+
+import Tkinter as tk
+
+import db as dbEntry
+
+window = tk.Tk()
+
+username=tk.Entry(window)
+
+password=tk.Entry(window)
+
+def SaveDb():
+
+str1=username.get()
+
+str2=password.get()
+
+dbEntry.InsertDB(str1,str2)
+
+btn=tk.Button(window,text="Save", command=SaveDb)
+
+#pack organize items in the window
+
+username.pack()
+
+password.pack()
+
+btn.pack()
+
+window.mainloop()
+

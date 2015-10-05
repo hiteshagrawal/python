@@ -1,0 +1,14 @@
+Tkinter  # Build in
+Pygames
+simplegui
+
+GUI Programs has following
+GUI Module
+Window -- >Object
+Widgets -- > Like button
+
+Structure:
+* Setup
+* Main Loop
+* Shutdown
+
