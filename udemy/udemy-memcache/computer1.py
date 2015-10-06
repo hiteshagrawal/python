@@ -51,8 +51,9 @@ def multiplyHandler(a, b):
 
 if __name__ == '__main__':
 	multiplyHandler(26,13)
-	# multiplyHandler(5,6)
-	# multiplyHandler(10,6)
-	# multiplyHandler(12,6)
-	# multiplyHandler(24,6)
+	multiplyHandler(5,6)
+	multiplyHandler(10,6)
+	multiplyHandler(12,6)
+	multiplyHandler(24,6)
 
+print CACHE.printname()

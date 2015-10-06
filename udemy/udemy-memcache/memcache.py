@@ -23,7 +23,10 @@ class Memcache:
 			del self.cache[key]
 
 	def flush(self):
-		return self.cache.clear()		
+		return self.cache.clear()	
+
+	def memory(self):
+		return self.cache		
 
 
 if __name__ == '__main__':

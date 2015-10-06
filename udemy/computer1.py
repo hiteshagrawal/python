@@ -37,7 +37,7 @@ def lastMultipliedHandler():
 
 def multiplyHandler(a, b):
 	key = (a,b)
-    if key in CACHE:
+	if key in CACHE:
 		print CACHE[key]
 	else:
 		result = fake_database.russian(a, b)
