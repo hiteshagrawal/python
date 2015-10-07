@@ -1,0 +1,81 @@
+Every now and then you come across an interesting engineering challenge. What defines an ‘interesting challenge’ differs for each of us. For me, the kind of problems that spark my interest involve parsing data streams, especially larger amounts of data (probably because it’s low-level in nature and there’s a hardcore feeling that comes with it). That’s exactly what this post is about.
+
+
+The problem: where foresight failed
+
+At Avisi, we maintain an integration platform which sends data to the outermost borders of the client’s realm. Recently, a new service was introduced as part of a larger project which was about exporting a bounded dataset to a publication service. The service was to be REST-like (plain HTTP), the format JSON for its simplicity. The development of both the integration service (sender) and the publication service (receiver) went smoothly and it wasn’t long before it was deployed to our final staging environment. The setup ran fine until the Epic-Data-Import-Step of the client’s project was executed and complaints about stale data started to come in. A quick analysis pointed to the obvious: the publication service wasn’t being updated anymore, which was clearly related to last week’s data import. It became clear that nobody told the poor developer about the amount of data expected and that he didn’t ask either.
+
+A quick count query in the database pointed out that the data import added hundreds of thousands of records, which were all to be sent to the publication service. In raw data (UTF-8 encoded), this came down to somewhere between 100 and 200 megabytes. When taking the overhead of the JSON format (which is quite verbose) into consideration, this became somewhere about ~250 megabytes. Since the poor virtual machine on the publication service (receiver) didn’t quite have gigabytes of free memory to spare, this was clearly an issue. Especially, since the service tried to load the complete dataset in memory twice. Let’s do the math:
+
+Raw HTTP request buffered somewhere in a string-like representation: ~250mb
+JSON objects parsed by flexjson: at least ~150mb
+This comes down to somewhere around 400mb of heap space which couldn’t be spared on the target machine.
+
+Solution
+
+The convenient thing about this dataset is that its layout is completely flat: a large set of relatively small (max. ~100kb) objects (see image below). This means we can simply split the data set into those little atomic objects, process them and finally leave them for the garbage collector so we don’t choke our heap.
+
+Big pile of json.
+
+Initially we used flexjson‘s JSONTokener which has a clean and simple API for doing the job its named after: tokenizing JSON. We parsed the JSON stream using its ‘parseArray()‘ method which wasn’t flexible enough to allow us to stream-process the data, since it parses all the data at once, choking our heap. So I switched to the Jackson JSON library which I knew could do the job. Looking at Jackson’s JsonParser API, the following pseudo code came to my mind:
+
+Pseudo code: read, do, clean up
+while: there are objects to read
+    read: next object
+    do: something with the object
+    clean up: the object
+Implementing this using Jackson proved easy enough, using Jackson’s START_OBJECT token as marker for reading the next object:
+
+Jackson to the rescue: read, do, clean up
+// Initialize 'stream', e.g.:
+// InputStream stream = new FileInputStream("test.js");
+ 
+ObjectMapper mapper = new ObjectMapper();
+JsonFactory jsonFactory = mapper.getJsonFactory();
+JsonParser jp = jsonFactory.createJsonParser(stream);
+JsonToken token;
+while ((token = jp.nextToken()) != null) {
+    switch (token) {
+        case START_OBJECT:
+            JsonNode node = jp.readValueAsTree();
+            // ... do something with the object
+            System.out.println("Read object: " + node.toString());
+            break;
+    }
+}
+Thanks to Java’s garbage collector we don’t have to worry about cleaning up the read objects (unless we store them somewhere else in-memory). This is actually the core concept of tackling these problems: read, process, discard.
+
+Two last side notes:
+
+Later I found out about flexjson’s JSONTokener.nextValue() which probably can be used to achieve the same goal, instead I switched to Jackson right away (a bit shortsighted of me).
+One might be tempted to go ‘hardcore’ and manually call upon the garbage collector (System.gc()), but don’t. Most likely it won’t do anything to speed up your application and could even hurt performance. That is, if garbage collection is forced at all (some application containers disable System.gc() by default configuration).
+Conclusion
+
+What have I learned from this?
+
+Parsing streams is fun, since it sparks my engineering brain’s interest.
+Don’t assume the library you’re comfortable with (Jackson) is better than the one already in place (flexjson).
+Expected data size is a non-functional requirement which should always be spec’d.
+A final thought on optimizing performance, Jeff Atwood’s view (which could be a wake-up call): http://www.codinghorror.com/blog/2008/12/hardware-is-cheap-programmers-are-expensive.html.
+
+References
+
+Flexjson
+http://flexjson.sourceforge.net/
+Jackson
+http://jackson.codehaus.org/
+Stackoverflow on ‘Why is it a bad practice to call System.gc?’
+http://stackoverflow.com/questions/2414105/why-is-it-a-bad-practice-to-call-system-gc
+Jeff Atwood on optimizing performance: hardware v.s. code
+http://www.codinghorror.com/blog/2008/12/hardware-is-cheap-programmers-are-expensive.html
+
+This entry was posted in Development, Java, Technical and tagged as flexjson, jackson, Java, Json, optimizing, parsing, Software Development, streaming. Bookmark the permalink.
+
+About Rein Krul
+
+Software Engineer at Avisi, Arnhem.
+View all posts by Rein Krul →
+FacebookLinkedIn
+9 THOUGHTS ON “JACKSON AND PARSING STREAMS: A SHORT STORY ABOUT A BIG PILE-O-JSON”
+Tatu Saloranta on November 29, 2012 at 18:59 said:
+Thank you for sharing this! One minor comment: you can just create FileInputStream instead of FileReader — the main benefit is that it avoids possible problems with file encoding (parser will auto-detect correct encoding). And it’s bit more efficient too.
