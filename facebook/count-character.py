@@ -18,4 +18,4 @@ for char,count in my_list:
 
 new_list.sort(reverse=True)
 for count,char in new_list:
-	print "The character %s appeared %d times" %(char,count)
+	print "The character \'%s\' appeared %d times" %(char,count)
