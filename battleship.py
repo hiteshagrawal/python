@@ -42,7 +42,7 @@ def guess_loc(count):
 		else:
 			print "Try another guess:"
 			count = int(count) - 1
-			print "Remaining guesses:" + str(count)
+			print "Remaining guesses: %i" %(count)
 			print ""
 
 guess_loc(3)			
