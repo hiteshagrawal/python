@@ -15,8 +15,8 @@ def check_sticker(string, sticker):
 	print "Total Sticker required is: %d "	%(sticker_count)	
 
 
-my_string = 'hitttttttesh'
-my_sticker = 'hittesh'
+my_string = 'hittttttteesh'
+my_sticker = 'hitesh'
 
 check_sticker(my_string,my_sticker)
  
