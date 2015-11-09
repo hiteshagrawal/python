@@ -3,10 +3,10 @@
 mystr = "You can learn any programming language, whether it is Python2, Python3, Perl, Java, javascript or PHP."
 import re
 #a = re.match(pattern, string, optional flags)
-a = re.match("You", string)
+a = re.match("You", mystr)
 #re.match("you", mystr, re.I)  ## to ignore case  , to locate the string at start of the string
 #
-a.group()
+print a.group()
 ## Will return You
 
 #search()
@@ -23,7 +23,9 @@ a = re.search(r"(.+?) +(\d) +(.+?)\s{2,}(\w)*", arp)
 #\w  matches any word characters  and _
 #()  -- creates  a group  --> a.group(1)
 #a.group(0) is the entire line match
+print a.group(0)
 # a.groups()  , gives a list of tuples
+print a.groups() 
 
 ## Third  function findall()
 

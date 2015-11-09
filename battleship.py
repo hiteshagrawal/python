@@ -19,7 +19,7 @@ board_print(board)
 my_ship_xaxis = random.randrange(5)
 my_ship_yaxis = random.randrange(5)
 
-#print "My ship position is: %d , %d " % (my_ship_xaxis,my_ship_yaxis)
+print "My ship position is: %d , %d " % (my_ship_xaxis,my_ship_yaxis)
 
 def guess_loc(count):
 	count = count
@@ -41,7 +41,7 @@ def guess_loc(count):
 			break
 		else:
 			print "Try another guess:"
-			count -= count
+			count = int(count) - 1
 			print "Remaining guesses:" + str(count)
 			print ""
 
