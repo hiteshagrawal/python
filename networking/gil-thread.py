@@ -2,12 +2,12 @@
 #http://www.dabeaz.com/python/UnderstandingGIL.pdf
 from threading import Thread
 def countdown(n):
-	print "Running with countdown:", str(n)
+	print "Running with countdown:", str(n) + "\n"
 	a = n
 	while n > 0:
 		n -= 1
 	#s	print "thread:" , str(a) , str(n)
-	print "Finished the thread with count:", str(a)
+	print "Finished the thread with count:", str(a) + "\n"
 
 COUNT = 100000000 # 100 million
 #countdown(COUNT)	

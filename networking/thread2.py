@@ -6,9 +6,9 @@ import time
 ## time.sleep(1)  --> to sleep the program for 1 secs
 
 def myfunction(n):
-    print "Start a thread:", n
+    print "Start a thread:", n 
     time.sleep(3)
-    print "End a thread:", n
+    print "End a thread:", n 
 
 threads = []
 
