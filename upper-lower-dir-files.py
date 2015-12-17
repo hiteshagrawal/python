@@ -26,15 +26,19 @@ Hiteshs-MacBook-Air:python hitesha$
 """
 import os
 fullpath = raw_input("Enter Directory Path: ")
-for dirpath, dirs, files in os.walk(fullpath,topdown=False,followlinks=False):
-	## First rename files in the last directory from uppercase to lowercase
-	for filename in files:
-		#print os.path.join(dirpath,filename)
-		cmd = 'mv ' + os.path.join(dirpath,filename) + ' ' + os.path.join(dirpath) + '/' + os.path.join(filename).lower()
-		print "Renaming file " + cmd
+if os.path.exists(fullpath):
+	for dirpath, dirs, files in os.walk(fullpath,topdown=False,followlinks=False):
+		## First rename files in the last directory from uppercase to lowercase
+		for filename in files:
+			#print os.path.join(dirpath,filename)
+			cmd = 'mv ' + os.path.join(dirpath,filename) + ' ' + os.path.join(dirpath) + '/' + os.path.join(filename).lower()
+			print "Renaming file " + cmd
+			os.system(cmd)
+		#After files, rename the directory from uppercase to lower case	
+		#print dirpath	
+		cmd = 'mv ' + os.path.join(dirpath) + ' ' + os.path.split(dirpath)[0] + '/' + os.path.basename(dirpath).lower()
+		print "Renaming Directory " + cmd
 		os.system(cmd)
-	#After files, rename the directory from uppercase to lower case	
-	#print dirpath	
-	cmd = 'mv ' + os.path.join(dirpath) + ' ' + os.path.split(dirpath)[0] + '/' + os.path.basename(dirpath).lower()
-	print "Renaming Directory " + cmd
-	os.system(cmd)
+else:
+	print "The directory you mentioned doesn't exists " + fullpath
+
