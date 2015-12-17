@@ -43,7 +43,10 @@ html = urllib.urlopen(url).read()
 soup = BeautifulSoup(html)
 tags = soup('a')
 #print tags
+#print "This is my data"
 # print tags[position]
+# print "This is my data 2"
+# print tags[position].get('href', None)
 
 for i in range(count):
 	## print the contents specified at position

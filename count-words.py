@@ -11,7 +11,7 @@ except:
 fh = open(file)
 data_dict = {}
 for line in fh:
-   line = line.strip()
+   line = line.strip().lower()
    words = line.split()
    for word in words:
         data_dict[word] = data_dict.get(word,0) + 1
