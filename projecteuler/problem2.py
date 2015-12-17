@@ -9,9 +9,9 @@ def fibonacci(number):
 	while total < number:
 		total = old_num + new_num
 		my_array.append(total)
-		old_num = new_num		
 		if new_num % 2 == 0:
 			even_total += new_num
+		old_num = new_num
 		new_num = total	
 	print total		
 	print my_array
