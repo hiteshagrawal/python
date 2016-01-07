@@ -1,0 +1,154 @@
+DataStructures in python or any programing language
+
+1) Strings
+
+>>> a = "Hitesh is a good boy"
+>>> print a
+Hitesh is a good boy
+>>> 
+>>> print b
+Hitesh is a good boy
+>>> 
+
+2) Numbers/Integers
+
+>>> x = 3
+>>> print x
+3
+>>> y = x
+>>> print y
+3
+>>> x = 5
+>>> print y
+3
+>>> 
+
+
+3) Boolean Value
+True or False
+
+4) Float Value
+
+>>> x = 5.34
+>>> print x
+5.34
+>>> 
+
+5) lists -- is a ordered list of elements
+
+>>> print vegetables
+['apple', 'banana', 'orange', 'apple', 'g', 'r', 'a', 'p', 's']
+>>> vegetables.pop(3)
+'apple'
+>>> print vegetables
+['apple', 'banana', 'orange', 'g', 'r', 'a', 'p', 's']
+>>> print fruits
+['grapes']
+>>> vegetables.extend(fruits)
+>>> print vegetables
+['apple', 'banana', 'orange', 'g', 'r', 'a', 'p', 's', 'grapes']
+>>> print fruits
+['grapes']
+>>> print vegetables[2]
+orange
+>>> print vegetables[2][0]
+o
+>>> print vegetables[2][4]
+g
+>>> print vegetables[2][0:5]
+orang
+>>> print vegetables[2][0:3]
+ora
+>>> print vegetables[2][:3]
+ora
+>>> print vegetables[2][1:3]
+ra
+>>> print vegetables[2][1:]
+range
+>>> print vegetables[2][1:-1]
+rang
+>>> print vegetables[2][1:-2]
+ran
+
+print list[startingelement:endingelement:step]
+
+
+lists of list
+>>> super = [vegetables,fruits]
+>>> print super
+[['apple', 'banana', 'orange', 'g', 'r', 'a', 'p', 's', 'grapes'], ['grapes']]
+>>> len(super)
+2
+>>> print super[0][1]
+banana
+>>> print super[0][1][1]
+a
+>>> 
+
+>>> b = [1,2,3,4]
+>>> id(b)
+4376879544
+>>> c = b
+>>> id(c)
+4376879544
+>>> c = list(b)
+>>> id(c)
+4376880264
+>>> 
+
+
+6) Tuple - similar to list , but cannot mutate(change)
+>>> my_tuple = tuple(veg)
+>>> print my_tuple
+('orange', 'banana', 'orange', 'g', 'r', 'a', 'p', 's', 'grapes')
+>>> print my_tuple[0]
+orange
+>>> my_tuple[0] = my_tuple[2]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+>>> my_tuple[0] = my_tuple[3]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+>>> my_tuple.pop()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'tuple' object has no attribute 'pop'
+>>> my_tuple.sort()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'tuple' object has no attribute 'sort'
+>>> dir(my_tuple)
+['__add__', '__class__', '__contains__', '__delattr__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getslice__', '__gt__', '__hash__', '__init__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'count', 'index']
+>>> print veg
+['orange', 'banana', 'orange', 'g', 'r', 'a', 'p', 's', 'grapes']
+>>> print veg.count('count')
+0
+>>> print veg.count('orange')
+2
+>>> print veg.count('g')
+1
+
+
+7) Dictionaries or Hashes or key/value pairs
+Funda
+key should be unique, no duplicate keys are allowed
+keys should not be mutable , hence you can only have strings and tuple as keys
+
+8) set
+
+
+if True:
+  do this
+else:
+  do that
+
+if True:
+  do this
+elif 1 === 1:
+   do this one
+elif 3 > 5:
+    do this one
+else:
+    this is default when all above fails             

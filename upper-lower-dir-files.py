@@ -26,7 +26,6 @@ Hiteshs-MacBook-Air:python hitesha$
 """
 import os
 fullpath = raw_input("Enter Directory Path: ")
-if os.path.exists(fullpath):
 	for dirpath, dirs, files in os.walk(fullpath,topdown=False,followlinks=False):
 		## First rename files in the last directory from uppercase to lowercase
 		for filename in files:
