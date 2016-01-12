@@ -10,6 +10,6 @@ def count_occurrences(target_list, predicate):
     return sum([1 for e in target_list if predicate(e)])
 
 my_predicate = is_even
-my_list = [2, 4, 6, 7, 8, 9, 11]
+my_list = [1, 2, 4, 6, 7, 8, 9, 11, 12]
 result = count_occurrences(my_list, my_predicate)
 print(result)

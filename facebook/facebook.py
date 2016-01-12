@@ -51,7 +51,7 @@ for key in my_animal.keys():
 	#print my_dict[key]
 	my_animal[key] = my_animal.get(key) + my_dict[key]
 
-#print my_animal  
+print my_animal  
 
 ## Now calculate speed
 #speed = ((STRIDE_LENGTH / LEG_LENGTH) - 1) * SQRT(LEG_LENGTH * g)

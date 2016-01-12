@@ -35,6 +35,6 @@ class FootballFan(PartyAnimal):
 		self.party()
 		print self.name, "points", self.points
 
-
-ac = FootballFan("Nidhi")
-ac.touchdown()
+if __name__ == '__main__':
+	ac = FootballFan("Nidhi")
+	ac.touchdown()

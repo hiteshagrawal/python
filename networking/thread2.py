@@ -6,9 +6,9 @@ import time
 ## time.sleep(1)  --> to sleep the program for 1 secs
 
 def myfunction(n):
-    print "Start a thread:", n 
+    print "Start a thread:%s\n" %(n)
     time.sleep(3)
-    print "End a thread:", n 
+    print "End a thread:%s\n" %(n) 
 
 threads = []
 
@@ -18,8 +18,11 @@ th2 = threading.Thread(target = myfunction,args="2")
 th3 = threading.Thread(target = myfunction,args="3")
 th4 = threading.Thread(target = myfunction,args="4")
 th5 = threading.Thread(target = myfunction,args="5")
-th1.start();th2.start();th3.start();th4.start();th5.start()  ## To start the thread  
+th1.start();th2.start();th3.start();th4.start();th5.start()  ## To start the thread 
+print th1 , th2 , th3 , th4 , th5 
 th1.join();th2.join();th3.join();th4.join();th5.join()
+
+print th1 , th2 , th3 , th4 , th5
 
 # for th in threads:
 #     th.join()   ## join method for threading class Waits for thread to terminate
