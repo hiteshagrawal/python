@@ -143,7 +143,3 @@ def get_org(id,counter):
     
 #    employee.name 
 
-my_dict = {i:MyList.count(i) for i in MyList}
-
->>> print my_dict     #or print(my_dict) in python-3.x
-{'a': 3, 'c': 3, 'b': 1}
