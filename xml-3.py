@@ -14,6 +14,8 @@ data = fh.read()
 print 'Retrieved',len(data),'characters'
 tree = ET.fromstring(data)
 lst = tree.findall('comments/comment/count')
+print type(lst)
+print lst
 names = tree.findall('comments/comment/name')
 results = sum(int(x.text) for x in lst)
 print 'Count:', len(lst)

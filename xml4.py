@@ -10,6 +10,7 @@ url = 'http://pr4e.dr-chuck.com/tsugi/mod/python-data/data/comments_170258.xml'
 print 'Retrieving', url
 fh = urllib.urlopen(url)
 data = fh.read()
+print data
 print 'Retrieved',len(data),'characters'
 tree = ET.fromstring(data)
 lst = tree.findall('comments/comment/count')

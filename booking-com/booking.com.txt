@@ -1,0 +1,104 @@
+Welcome to Booking.com TitanPad!
+
+This is the place where you can share a code during your phone interview.
+This pad text is synchronized as you type, so that everyone viewing this page sees the same text.
+
+Text is color-coded by author.
+Please set your name and color on the right side of the page.
+
+At certain time our interviewers access it as well and interview will take place.
+
+Should you have any further questions regarding the process, arrangements or feedback please contact our recruiting team.
+
+Have a great interview and we hope to bring you positive feedback soon!
+
+
+Attempt as many of the problems as you can. After the given time, a snapshot of the solutions on the Titanpad editor will be collected.
+
+Consider the efficiency of your solutions. It is up to you to decide if you will attempt optimal solutions to a smaller number of the problems, or less optimal solutions, but attempting to solve more of the problems. If you are invited for a technical phone interview, we may follow up and discuss any choices that you made in your solutions.
+
+Any programming language can be used for any problem. You are free to use any libraries or APIs that you are familiar with. We may follow up and discuss the efficiency of any external tools that you incorporate.
+
+By submitting your solutions, you certify that the code was typed by you alone. Good luck.
+
+--
+
+Problem 1:
+
+Implement a function nondecreasing_subsequences() that, given a sequence of numbers such as:
+
+  [ 3,6,61,6,7,9,1,7,7,2,7,7,2,388,3,72,7 ]
+
+... will identify and return each contiguous sub-sequence of non-decreasing numbers. E.g. this example input should return this array-of-arrays (e.g. or list-of-lists)
+
+  [ [3,6,61],[6,7,9],[1,7,7],[2,7,7],[2,388],[3,72],[7] ]
+
+(Each array includes a sequence of numbers that do not get smaller. The original order is unchanged.) For a visual example of a non-decreasing, see:
+http://en.wikipedia.org/wiki/File:Monotonicity_example1.png
+
+--
+
+Problem 2:
+
+Implement a function all_anagram_groups() that, given many input strings, will identify and group words that are anagrams of each other. An anagram is word that is just a re-arrangement of the characters of another word, like "reap" and "pear" and "a per" (whitespace is ignored). But "pear" and "rep" are not, since "rep" does not have an "a". Also, "the" and "thee" are not anagrams, because "the" only has one "e". 
+
+Given this example input:
+
+[ "pear","dirty room","amleth","reap","tinsel","tesla","hamlet","dormitory","listen","silent" ]
+
+The output should be an array-of-arrays (or list-of-lists)
+
+[
+  ["pear","reap"],
+  ["dirty room","dormitory"],
+  ["amleth","hamlet"],
+  ["tinsel","listen","silent"],
+  ["tesla"]
+]
+
+Problem 3:
+
+Write a function get_hops_from(page1, page2) that will determine the number of hyperlinks that you would need to click on to get from some page1 on the web to some other page2 on the web.
+
+For example, if each page below links to the pages that are indented below it, e.g. page 1 links to pages 2 and 5, and page 2 links to pages 3 and 4, and page 5 links to pages 3 and 7, then the get_hops_from(page1, page7) should return 2 (2 hops), since you have to hop once from page 1 to 5 and once more from page 5 to page 7.
+
+
+page1 :       distance == 0
+    page2 :   distance == 1
+      page3 : distance == 2
+      page4 : distance == 2
+    page5 :   distance == 2
+      page3 : distance == 2
+      page7 : distance == 2
+
+Assume that an API is available to:
+* get_links(a_page) will return an array/list of all pages that a_page links to
+
+
+Problem 4:
+
+Implement a function sort_numerically() that will receive a list of numbers represented in English words and return the listed sorted by their numeric value, starting with the largest.
+
+Input:
+
+[
+    "seventy five",                                                                                                     
+    "two hundred forty one",                                                                                           
+    "three thousand",                                                                                          
+    "one million thirty five thousand twelve",
+    "twenty", 
+    "five hundred thousand",
+    "two hundred", 
+]
+
+Output:
+ 
+[
+  "one million thirty five thousand twelve",
+  "five hundred thousand"
+  "three thousand",
+  "two hundred forty one",
+  "two hundred",
+  "seventy five",
+  "twenty",
+]

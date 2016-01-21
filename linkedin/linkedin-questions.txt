@@ -143,3 +143,59 @@ def get_org(id,counter):
     
 #    employee.name 
 
+=========================
+Improved correct code
+import urllib
+import json
+counter = 0
+while True:
+    id = raw_input("Enter Employee id:")
+    if len(id) >= 1: break
+
+
+def get_org(id,counter):
+    #global counter
+    my_url = "http://www.linkedin.corp/api/employee/" + id
+    url = urllib.urlopen(myurl).read()
+    my_json = json.loads(url)  
+    employee_name = my_json[“name”]
+    title = my_json[“title”]
+    new_id = my_json[“reports”]
+    a = ""
+    for tab in range(counter):
+        a += "\t"
+        print a, "%s - %s"  %(employee_name, title)
+    if len(new_id) >= 1: ## This will run only when you have reportees
+	counter +=1
+        for new_id in my_json[reports]:
+            get_org(new_id,counter)   
+    
+#    employee.name 
+
+if ‘__name__’ == ‘__main__’:
+    get_org(id,counter)
+
+======================================
+https://gist.github.com/nerd0/52b2481026ef42dc5e82
+http://pastebin.com/u/Koolaidrain
+
+------ Web Architecture and Design Knowledge
+ 
+What happens after you enter "ssh _host name_" into the command line?
+ 
+It's your first day on the job as an Ops guy.
+What monitoring do you begin to put in place on the site in the first week?
+...Month? Quarter? What do you track?
+ 
+You have a lot of production servers and a giant data set that will be updated consistently over time.
+The data set is updated 4 times per day. How do you get all your production servers up to date consistently, automated?
+...First job doesn't finish before the second. What do you do?
+ 
+------ Systems and Architecture
+ 
+You're running a static site on one server. Latency is high and some connections don't go through. What do you do?
+(Apache parallelization of worker tasks, redundancy in the static assets on different hard disks to parallelize content access)
+ 
+Now you're running a large distributed service that takes content from a bunch of other services in order to return content. One of these services goes down often. Besides fixing their side of things, what can you do to mitigate losses on your side of the content?
+ 
+You have a set of machines with the best hardware available to you. Your service is keeping track of user actions over time, though you're beginning to run out of memory to store this stuff in your database, and your service is getting slower. What do you do?
