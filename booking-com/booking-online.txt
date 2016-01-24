@@ -1,0 +1,26 @@
+http://webtutplus.com/booking-com-hackathon-question-1/
+http://webtutplus.com/booking-com-hackathon-question-2/
+http://webtutplus.com/booking-com-hackathon-question-3/
+
+User: tasker
+Server: 52.23.160.108
+Password: j295g0
+
+Command: ssh tasker@52.23.160.108
+
+Not able to connect
+https://my.telegram.org/auth
+
+systemctl status httpd.service
+
+pickup -l -t unix -u
+
+
+
+ /tmp/run/mysterious_strange_binary_running
+
+
+ [root@ip-10-0-13-92 conf]# cat /tmp/logcount 
+#!/bin/bash
+awk '{print $1}' /tmp/logfile | sort | uniq -c | sort -nr | head | awk '{print $2, $1}'
+[root@ip-10-0-13-92 conf]# 

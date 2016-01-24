@@ -23,7 +23,9 @@ Assume that an API is available to:
 
 
 def get_links(page):
-	my_dict = {"page1":["page2", "page5"], "page2":["page3","page4"], "page5":["page3","page7"], "page3":[], "page4":[], "page6":[], "page7":{"page8","page9"}, "page8":["page10"]}
+	my_dict = {"page1":["page2", "page5"], "page2":["page3","page4"], 
+	"page5":["page3","page7"], "page3":[], "page4":[], 
+	"page6":[], "page7":{"page8","page9"}, "page8":["page10"]}
 	return my_dict[page] ## This will return an array
 
 def get_hops_from(page1, page2, counter = 0):
@@ -44,7 +46,7 @@ def get_hops_from(page1, page2, counter = 0):
 	if page2 in data:
 		my_pages.append(page1)
 		print "To reach %s from %s" %(page2,my_pages[0])
-		print my_pages, "no of links required:", counter + 1
+		print my_pages, "no of links required:", counter + 1 , "\n"
 		return True
 	else:
 		for new_page in data:

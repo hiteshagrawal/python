@@ -75,4 +75,7 @@ def all_anagram_groups(my_list):
 		temp_list = []
 	print final_list
 
-all_anagram_groups(a)		
+all_anagram_groups(a)	
+
+
+	

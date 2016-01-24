@@ -177,7 +177,7 @@ if ‘__name__’ == ‘__main__’:
 
 ======================================
 https://gist.github.com/nerd0/52b2481026ef42dc5e82
-http://pastebin.com/u/Koolaidrain
+I
 
 ------ Web Architecture and Design Knowledge
  
