@@ -18,6 +18,17 @@ def fibonacci(number):
 	print "The sum of even fibonacci number till %d is %d" % (number,even_total)
 
 
+def fibonacci_new(max):
+	next = 1
+	fibonacci_list = [0]
+	while True:
+		if next <= max:
+			fibonacci_list.append(next)
+			next = fibonacci_list[-1] + fibonacci_list[-2]
+		else:
+			break
+	print fibonacci_list			
+
 fibonacci(4000000)
 
 

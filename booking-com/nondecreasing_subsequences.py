@@ -12,8 +12,8 @@ Implement a function nondecreasing_subsequences() that, given a sequence of numb
 (Each array includes a sequence of numbers that do not get smaller. The original order is unchanged.) For a visual example of a non-decreasing, see:
 http://en.wikipedia.org/wiki/File:Monotonicity_example1.png"""
 
-a = [ 3,6,61,6,7,9,1,7,7,2,7,7,2,388,3,72,7 ]
-a = [ 3,6,61,62,6,7,9,1,7,7,2,7,7,2,388,3,72,7 ]
+#a = [ 3,6,61,6,7,9,1,7,7,2,7,7,2,388,3,72,7 ]
+a = [ 3,6,61,62,6,7,9,1,7,7,2,7,7,2,388,3,72,7,6,8,9,3 ]
 
 def nondecreasing_subsequences(my_list):
 	final_list = []
@@ -26,8 +26,9 @@ def nondecreasing_subsequences(my_list):
 		else:
 			final_list.append(sub_list)	
 			sub_list = [i]
-		init = i	
-	final_list.append(init)		
+		init = i				
+	#final_list.append(init)	
+	final_list.append(sub_list)		
 	print final_list		
 
 
