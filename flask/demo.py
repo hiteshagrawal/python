@@ -1,5 +1,8 @@
 #!/usr/bin/python
-"https://www.youtube.com/watch?v=Wb-K40mkhEU"
+
+"""https://www.youtube.com/watch?v=Wb-K40mkhEU
+https://github.com/jakecoffman/flask-tutorial
+"""
 import flask, flask.views, os, random
 app = flask.Flask(__name__)
 ## Should be random

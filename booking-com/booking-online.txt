@@ -2,6 +2,8 @@ http://webtutplus.com/booking-com-hackathon-question-1/
 http://webtutplus.com/booking-com-hackathon-question-2/
 http://webtutplus.com/booking-com-hackathon-question-3/
 
+ 1. Started with a HackerRank - session 5 questions   - 90 mins, not very hard After that 6 rounds of interview: 2. HR round - to understand interest level, work experience and knowledge about Booking.com 3. Technical round - pair programming on a shared code-collaborator environment, 2 programming questions (basic array and hash questions) Invited to Amsterdam - for face to face interview 4. HR round - for answering any questions, salary discussions etc. 5. Technical round - design graphite from scratch, evolved designed system to handle scaling scenarios 6. Technical round - 2 problems - a. retweet twitter tweets if newer one is an anagram of older one, b. 20 boxes - 500 GB log files on each - no processing box on server file, aggregate data on one box and parse for phone numbers - bookings. Efficiently. 7. Technical and Culture fit round: Discussed various scenarios encountered during work and how will be your behavior on them 8. HR round - offer ! - Offer very low pay, considering high cost of living NL - Amsterdam declined the offer 
+
 User: tasker
 Server: 52.23.160.108
 Password: j295g0
