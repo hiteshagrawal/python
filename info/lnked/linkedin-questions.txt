@@ -1,7 +1,7 @@
 #Write a program which prints out all numbers between 1 and 100. When the program would print out a number exactly divisible by 4, print "Linked" instead. When it would print out a number exactly divisible by 6, print "In" instead. When it would print out a number exactly divisible by both 4 and 6, print "LinkedIn" instead.
 #(Max. Time: 5 minutes)
 
-for num in xrange(100):
+for num in xrange(1,101):
     if num % 4 == 0 and num % 6 == 0:
         print "LinkedIn"
     elif num % 4 == 0:
@@ -153,7 +153,7 @@ while True:
     if len(id) >= 1: break
 
 
-def get_org(id,counter):
+def get_org(id,counter=0):
     #global counter
     my_url = "http://www.linkedin.corp/api/employee/" + id
     url = urllib.urlopen(myurl).read()
@@ -164,7 +164,7 @@ def get_org(id,counter):
     a = ""
     for tab in range(counter):
         a += "\t"
-        print a, "%s - %s"  %(employee_name, title)
+    print a, "%s - %s"  %(employee_name, title)
     if len(new_id) >= 1: ## This will run only when you have reportees
 	counter +=1
         for new_id in my_json[reports]:
