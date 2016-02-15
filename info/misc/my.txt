@@ -1,0 +1,409 @@
+Snapdeal.com Written Coding Round Questions
+
+1.  Find the maximum length of the substring equal number of 1s and 0s
+2.  Find the corrupted node present in a Binary Serach Tree
+3.  There are two Two Strings A and B, check whether string A has been rotated to String B. Return 'True' otherwise 'False'.  E.g : A = 'ABCD' and B = 'BCDA', it would return 'True'.
+4.  There is linked list containing aplhabets. Re-arrange the list in such a way that the vovels are placed in front of list. E.g - S -> N -> A -> P -> D -> E ->A ->L
+must be re-arranged to A ->E ->A -> S -> N -> P -> D -> L  
+5.  There is a linked list. Create two linked lists having the alternate elements of the main linked list. Eg. - the main list is 1 -> 0 -> 1 -> 0 -> 1 -> 0 -> 1 -> 0. Then the two lists should be 1 -> 1 -> 1 -> 1 and 0 -> 0 -> 0 -> 0
+-Uploaded by Ashish Bardhan
+ 
+Qualcomm questions:
+-By Ashish Gambhir
+
+Written Test:
+
+There were 55 questions. 20 on Aptitude (too easy, I knew I had got all correct), 20 on Operating Systems (would seem to be tough 4 an ECE guy like me), and 15 "what's the o/p" questions (10 correct were more than enough).
+Only 6 students were shortlisted for the software profile.
+
+Interview Questions:
+
+There were basically 2 Technical Interviews + 1 HR Interview.
+
+Round 1 -
+This was a long one. Initially I was asked questions from electronics mainly from micro-controllers like its internal structure, how the opcode is fetched. Then questions from my projects were asked. He was pleased to know that I had done some major projects in mobile app development. Later he went on digging deep on my pointers concept (each 1 of us 6 was asked a lot of questions on POINTERS). Also asked me to write a software program to differentiate between a little and a big endian machine.
+It was going Ok (bot not exceptional) till he asked me some OOPS concepts. He asked me to list some practical applications for it and fortunately I was able to name more than what were required to impress him.
+NO TYPICAL DATA STRUCTURE QUESTIONS WERE ASKED!
+
+Round 2 -
+Luckily no electronics was asked this time. A puzzle was asked which any1 preparing for CAT could answer. It went like:
+10 machines are producing 10 grams bullets. But one random machine got faulty and started producing 9 grams bullets. Now u've got a digital weighing machine. How many minimum times will you have to weigh the bullets to know which 1 is the wrong machine?
+
+Then came the POINTERS again. Again some questions testing the basics and then he gave me a sheet with a lengthy code written on it and asked me to find out the error.
+I'll make up somewhat the same code for the juniors to solve. But believe me it was much lengthier than this 1:
+typedef struct node { void * sound_ptr; void * image_ptr; struct node * next; }*File;
+File file_ptr=xfile_ptr;                       //any random external ptr
+void test_emptyFILE(File file_ptr){  if(file_ptr==NULL && (file_ptr->sound_ptr==NULL) && (file_ptr->image_ptr==NULL)){ printf("invalid"); ; }
+else if(file_ptr!=NULL && (file_ptr->sound_ptr!=NULL) && (file_ptr->image_ptr!=NULL)) printf("valid"); }
+main(){ test_emptyFILE(file_ptr); }
+
+Then was the HR round. They just wanted to make sure that I was not going for MS or any PG course.
+
+MyKaarma.com Written Coding Round Questions
+
+1. Find the maximum length of the substring with unique characters present in a string
+2. Print the number N ( 0 <= N <= 999,999,999 ) into words ( E.g. - 123456789 - One Hundered Twenty Three Million Four Hundred Fifty Six Thousand Seven Hundred Eighty Nine )
+
+-Uploaded by Ashish Bardhan
+
+
+One97 Coding Round Questions
+
+1. Rat in a Maze Problem
+2. There is a Matrix 'A' of nXn size. Find out the maximum sum by selecting only n elements from that matrix such that row number and column number of the matrix are different from each other.
+
+-Uploaded by Ashish Bardhan
+
+
+EPIC Coding Round Questions:
+We were supposed to write codes for 4 questions in 2 hrs. 
+
+1. There are different sizes of battery packets are available, one packet contains  6 batteries, the other one contains 9 batteries and third packet contains 20 batteries. You have to write a code to print all possible combinations if a buyer needs to buy N batteries in total.
+
+2. Take input from user until you get 0 as the input. Find avg of all the numbers in the list of numbers except the largest three numbers.
+eg: 1,2,3,4,5,6,7,8,9,10
+avg= (1+2+3+4+5+6+7)/7
+ Numbers are in random order
+
+3. Mingo is a game similar to tambola. You have a 100x100 mingo board which contains uniques number in range 1 to 1,000,000. Numbers are called in random order and they are marked on Mingo Board. You to display "Mingo" and the numbers of called numbers after the mingo occurs.
+
+Rules for Mingo: All elements of atleast one row or column or any of the diagonal elements should be called.
+
+4. Input a number from the user, eg: "236", the possible substrings are 2,3,6,23,36. You have to find whether a number is colorful or not. A number is colorful if the product of all elements in all substrings are uniques.
+For the "236" example, 2 => 2 , 3 => 3 , 6 => 6, 23 => 2*3, 36=> 3*6
+Since 6 is occuring twice from 6 and 2*3, it is not a colorful number.
+
+Now take example as "263", substrings are 2,6,3,26,63
+2 => 2, 6=>, 3=> 3, 26=>2*6, 63=>6*3
+Since all are uniques, it is a colorful number.
+
+-Uploaded by Sanchit Manchanda
+
+Microsoft Interview Questions
+
+Round 1 (Simplest):
+1. Print a matrix in spiral form.
+2. Optimise/justify your technique as the most optimised, take direction into account, test cases etc.
+3. Couple of simple theoretical questions just because we had extra time.
+
+Round 2 (Toughest):
+1. Given an api SetTimer of the form SetTimer(timeout, funA) which calls funA after time timeout. However, multiple threads running in a prog can result in resetting of the timer. For example,
+SetTimer(10,funA) followed by SetTimer(5,funB) will reset the Timer and funA will never be called. Given this framework, develop a library to overcome resetting of the initial call to SetTimer.
+2. I was asked to keep on adding functionality to the above for the following:
+(i)  return id's to threads in case they want to cancel the call in the future.
+(ii) include timestamps to take into account the already elapsed time (eg. SetTimer for funA might have only 8 time units remaining when SetTimer for funB arrives) etc etc.
+3. Questions on my projects and internships.
+
+Round 3:
+1. Given a string and a pattern, delete all occurrences of the pattern from the string. This had to be done in place in O(n) time (not the string matching of course) and O(1) space and with minimum number of shifts (as per my solution -> only one shift per index : this was the catch and area of focus).
+2. Optimise/justify your technique as the most optimised, test cases etc.
+3. General resume questions.
+
+Round 4:
+1. Given a string delete alternate occurrences of characters in the string. This had to be done in place in O(n) time and O(1) space and with minimum number of shifts(again one shift per index). (This was pretty much like Round 3, but the catch was to minimise the number of shifts when characters to be deleted appeared in chunks.)
+2. Optimise your space requirements.
+3. Where do you see yourself 5yrs down the line?
+4. Your best achievement till date?
+
+Plus each one asked me if I had any questions for them. Make sure you are prepared for this.
+
+--Uploaded by Deepti Bhardwaj
+
+Amazon Interview Questions
+
+Round 1:
+1. Discussion of project work.
+2. Given a very long piece of text(thousands of words), and another set of keywords; Find the shortest window within the larger text which contains all the keywords atleast once.
+3. How to determine whether a string is a rotation of another?
+After my solution which used string concatenation + strstr; I was asked to write the function strstr()--KMP etc. Further he wanted me to give an optimized version of the naive string matcher.
+
+Round 2:(with the manager, and hence was technical + HR)
+1. Tell me about yourself. Project Discussion. Why Amazon?
+2. Google or Amazon? (by far the most difficult question to handle)
+3. Implement a caching mechanism to store the details of products for Amazon.(this discussion continued for over 30 mins)
+4. Given a circular track with petrol pumps at different distances and with different capacity of petrol; determine the best possible starting location s.t. one is able to completely traverse the track.
+
+Round 3:
+1. Design a data-structure for a browser which is efficient as well as up-to-date wrt the content on the pages it stores in its cache(the most visited ones). Determine how would you tag pages as static or dynamic.
+2. Given a maze with cells, some of which you cannot move into. Given a starting location, find out the shortest way to any given destionation cell. However, a person can move to an adjacent cell  in front or to the right of the direction in which one enters the current cell. For instance if one enters a cell i,j from cell i,j+1 then he can move to i,j-1 or i-1,j ; but if one enters a cell i,j from cell  i+1,j then he can move to i-1,j or i,j+1.
+
+Round 4:
+1. A person has many friends on Facebook. Given a person and a friend find the best way to determine the path between them.(Note: Djikstra is too expensive and rather unecessary for such a task. DFS may prove expensive too.)
+2. Non recursive Inorder in a binary tree.
+3. Microprocessors: Difference b/w CALL and JMP. Are they interchangeable?
+4.Given n stairs to climb. I can either move 1 step or 2 steps at a time. Find the no. of ways of climbing the n stairs.
+
+Almost everone asked me if I had any questions for them. So make sure you atleast have 4-5 questions ready for them.
+
+Texas Instruments Interview
+
+1. What all subjects have you studied in college and which was your favourite?
+2. You are given an arr[100], which contains numbers from 1 to 100. Write the most efficient code to tell which element has repeated how many times.
+3. Difference between semaphore and mutex.
+4. Difference between process and threads.
+5. If you cannot use semaphores for producer-consumer problem what would you use?
+6. Which data structure is used in a hard disk?
+7. You click an image from a digital camera, how is it saved in the memory?
+8. How sound is recored in your phone?
+9. You load in image in ImageView (android), how memory is allocated for it? And whether the memory allocated is in 1d array or 2d array?
+10. Give recursive, dynamic programming and iterative approach for finding fibonnaci numbers. And which approach is prefered in which case and why?
+
+Few other ques which i cannot remember. It was more of a discussion with the interviewer and it lasted for 1 hr.
+-- Uploaded by Sanchit Manchanda 
+
+
+Microsoft IDC interview 
+
+1.Given a doubly linked list with a data item, a previous and a next ptr along with another pointer "child" that may point to the head of another doubly linked list of same type(it will lead to a general tree type of structure) or it may be null. Flatten the tree into a linked list... minimum space and time complexity(order n). The doubly linked lists's head and tail are given.
+2.You are given a class with Queue implemented in it and you have to implement a class with Stack  using the Queue class only.
+3.You are given a string and a substring.Write a function to remove the substring from the string withiut using any library functions. It should be in-place and in O(n) timecomplexity.
+4.You are given a stream of integers. Find the median of the stream at any point of time. Give the data structure and the implementation with code.
+5.Some questions on OS were also asked. 
+
+--Uploaded by Punit Singh
+
+CISCO Systems interview
+
+1.A question regarding the implementation of malloc() and free() on a system given with separate hardware.
+2.How does context switch take place in Round Robin Scheduling i.e. how everything happens at each step in complete detail.
+3.A question about any of your projects was asked to almost everybody.
+4.Write one line code in a function to swap alternate bits of a 32 bit integer, or to check whether it is a power of 2 or swap alternate 4-bits of a 32 bit integer. 
+
+--Uploaded by Punit Singh
+
+WinShuttle Written Coding Question
+
+There is an array of unique integers arranged in a random order
+Print all the possible pairs in an array whose difference is equal to any integer 'x'.
+
+-Uploaded by Ashish Bardhan
+
+some more questions asked at interview:
+1. Try to make 24  using numbers 3,3,8,8 in any order, operators * + - / % were allowed only.
+2. Write a function to get the intersection point of two Linked Lists.
+3. Given two strings, find if one is rotation of another .you can't use extra space here so concatenation will not work here.
+4. tell different ways to find a loop in a linked list.
+
+-Uploaded by Amit Kumar Singh
+
+
+DE Shaw & Co. Written Coding Question
+
+Find the integer(s) in an array of size N  which have been stored odd number of times.Range of integers is from 1 to N in the array.
+PS:- Time Complexity should be O(n) and Space Complexity should be O(1)
+
+-Uploaded by Ashish Bardhan
+
+DE Shaw & Co. interview questions
+i) A file has 10,000 numbers(integers). Sort all the numbers in the file . You can only use an array size 100 in the memory.
+ii) Difference between context switch of process and thread.
+iii) Write a function to implement "tail-n" command in the linux (interviewer was looking for the data structure to be used).
+iv)Questions related to virtual functions and virtual constructor.
+v) How to detect a loop in the singly linked list and mathematically prove your approach.
+
+Directi interview questions-
+ 1) Create a delete(int i) function for array 'arr' such that it deletes arr[i],arr[i]+1 and arr[i]-1
+2) Divide 2D array into 4 parts. Compute sum of each partition and get max value from the four of them. For all possible partitions get min value of such max values computed.
+3) There is an 2Darray N*N. Do some precomputations such that a query for gettting sum of M*M submatrix (M<N) for all possibilities can be computed efficiently.
+4) A puzzle. Can't Write it but easy to solve.
+Preinterview questions:-
+1) You are given start times and end times of a number of different activities.Now,you have to schedule the activities in such a way that you can do maximum number of activities given the fact that you can do only one activity at a time.The problem was to calculate the number of maximum possible activities.
+2) You have been given a 2*n grid and an infinite number of 1*2 and L shaped dominoes.Find the number of different possible configurations for the grid.N is of the order of 10^6
+
+Amazon Preinterview questions-
+ 1) Reverse k-nodes in a linklist
+2) Create function bool SumPath(node *root,int sum) which returns true when any one of the sum of path upto leaves is equal to sum.
+
+
+FLIPKART written questions-
+They had two coding questions, one of them is
+1) Given a word,write a program to find its rank in the dictionary created by using the characters in the given word.
+e.g. Given word "RANK",its rank( position ) in the dictionary using the characters 'R','A','N','K'
+would be
+All words starting with 'A'........3!
+'K'........3!
+'N'........3!
+Then 	 RAKN.......1
+and finally 	RANK........1
+So its rank would be 3!+3!+3!+1+1=20.
+
+2nd one question, I can't write down exactly.
+
+PRE-INTERVIEW written question-
+Given a general binary tree, a pointer to any internal node and an integer value 'K', find number of nodes that are 'K' distance apart from given internal node in all possible directions.
+(We have to code it in 30 minutes ).
+
+Interview:-
+1) Question involving function pointer.
+2) Computing Levinstein Distance.
+3) A puzzle. Can't write it but easy to solve.
+
+Facebook written question
+--By Saurabh Modi
+(with some help from Sir Vaibhav mittal's blogpost :P and my own general experience of the process )
+
+The written question.
+http://pastebin.com/5Xn0amVi
+There was one more written round.I'll upload it after jotting it down nicely.
+
+There were basically 4 interviews .The problems were quite simple on the whole,but they wanted us to code whatever solution we proposed in whatever language we were comfortable in.
+
+The question in interviews are as follows---
+
+Interview 1
+1. Given mapping of digits to characters as on a keypad of phone,and an input digit string,give all possible character mapping for numbers.For instance,
+if 1 ->a,b,c and 2 ->d,e,f ,then given "122",
+we get
+add
+ade
+aee
+afe
+bfe
+cfe
+cdd
+and so on as output.
+2.Write a program to find number of unique a,b,c,d such that "a^2+b^2=c^2+d^2" from a given array of numbers.
+3.Write a program to print a linked list in reverse(This was the easiest question,and the interviewer asked me this one,just because there was extra time to spend)
+
+Interview 2
+Given a grid of 0-1 find the largest square with all 1's.Dp problem,again not too difficult.
+
+
+Interview 3
+Different lists were given each of which contained symbols.We had to create a new list,wherein the symbols from original lists were enlisted in such a way that relative ordering between symbols in the original list is same as that in the new list i.e. if sqaure comes before circle in original lists,then it'll come before circle in the new list too.
+
+Interview 4
+They asked me about the work I did in my intern period,chalanges I faced,my interests,likes ,dislikes ,how I tend to approach problems and so on.Then he moved on to a question and asked me to code the solution.
+Given a list of words in an array,return a 2-d array,in which each array consists of anagrams,
+for instance,given
+{"cat","rat","mat","act","tam"}
+the result returnes should be
+{{"cat","act"},{"rat"},{"mat","tam"}}
+After that he asked me if I had any questions,so we talked for like 10-15 minutes and the interview ended.
+
+Other questions that vaibhav and/or punit faced but I didn't.
+1. Find cube root of number without using any library function number can be as large as 10^10003.
+2. Implement an LRU cache
+3. Also given a dictionary which is unordered list of words. Given a fone number, return the fone number transformed where transformation is that any suffix of fone number wil have some patterns as in Q1,interview 1. if any pattern exists den return fone number with that pattern instead of numbers in the suffix. u need to output the transformation also convert the largest possible suffix
+
+
+MS Subjective Programming Questions:-
+
+1. A Picture is stored in form of a matrix WAP to display the Image attributes when the picture is rotated by 90 degrees
+2. There is a linked list where some nodes have similar number. Sort them such that all the similar number nodes are cluster together.
+3. There is a Binary Search Tree (BST). Any Two of its nodes have been swapped, WAP to traverse and detect in BST which two nodes have been swapped. (Maybe you all have to swap those nodes after detection)
+
+-Uploaded by Ashish Bardhan
+
+FACEBOOK QUESTION NSIT 2012
+Tommy wants to reach school from his home. In the middle there are a multiple places. (Home and his school) is also counted as a place. The places(not necessarily all) are connected through bidirectional roads. Each day he takes one of these paths from his home to school. 
+
+A path is said to be valid if a place is not visited more than once and it always ends at the school.
+
+Now consider all the paths that Tommy can take. You have to output the number of places that Tommy can visit in his lifetime.
+
+Given:-
+Input
+t
+n m h s
+m lines
+Output:
+count
+t is  number of test casen is number of nodes,m id number of bidirectional path, h is home and s is school
+m lines bidirectional path b/w nodes x and y.
+out put count is number of different nodes he can go from school satisfying the condition.
+Sample Input:
+1
+3 3 0 1
+0 1
+1 2
+0 2
+Sample Output:
+3
+
+-Uploaded by Mukul
+
+Adobe Written Test Questions 2012
+
+1.Given a binary search tree and values of two nodes. Find the lowest common ancestor.
+2.Define doubly linked list. WAP to reverese a doubly linked list.
+3.Given the binary form of a number in a string. WAP to find 2's complement in that string itself.
+4.Given an array A (of intergers) containing (n-1) numbers ranging from 1 to n.    Find the missing number from array in just one traversal.
+5.Find output 
+ int main() 
+ {
+int *i,*j;
+i=(int *)60;
+j=(int *)20;
+printf("%d",i-j);
+return 0;	}
+6.A list of numbers was given. Draw the BST.
+7.arr[3][2][4]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24}.
+What is the value of **(*arr+1) ?
+8.One recursive assembly language program was given and its functionality was asked.
+9.one question was to simplify a boolean expression.
+10.which data structure is used to check for the matching paranthesis in an expression.
+11.one question was to evaluate a prefix expression.
+some more questions were on output.12.One question was also on Macro substitution in an expression. 
+
+-Uploaded by Piyush Goyal
+
+Microsoft IDC interview (round 1)
+
+1.Given a doubly linked list with a data item, a previous and a next ptr along with another pointer "child" that may point to the head of another doubly linked list of same type(it will lead to a general tree type of structure) or it may be null. Flatten the tree into a linked list... minimum space and time complexity(order n). The doubly linked lists's head and tail are given.
+
+
+ YAHOO
+-- Uploaded by Sajal Choudhary
+
+Round 1: This was a MCQ round with questions consisting of aptitude,puzzles,algorithmic puzzles, C++ output questions based on OOPS, and yes JAVA o/p questions too.(However many including me has guessed the JAVA ones). I dont remember much of the questions of this round by now. I do remember the very first question, it was famous "1000 bottles and plenty of rats" puzzle, in which we have to detect the only poisoned bottle with minimum number of rats to be killed.Just do a quick "YAHOO search" to find question with the solution.Have to do something with binary numbers. (Yeah, NO Google search :P)
+
+Round 2:Around 25 were selected (Not sure about the figures) for the next round. It was to test the coding skill of the fellows.There were three questions in which we have to do one in 2 hours time. Each questions had 5-6 goals which were to be completed within the time limit. Also there were 3-4 extended goals which could probably give greater impression on the YAHOO! guys.
+ The only easy question which made sense to me was :
+
+Q1. Generate commands
+ Goals:
+ add <firstname> <lastname> <gender> <age>
+ delete all
+ delete firstname = <firstname> lastname = <lastname>
+ print all
+ print firstname = <firstname>
+ sort 
+ Extended Goals
+exit
+save
+load
+
+So we have to develop the code in any platform, so the above commands when typed on the compiler would do following respectively:
+add the details in the datastructure you have used
+delete all the details entered uptill now
+delete the details of user with specific firstname and lastname
+print all details of all user.
+print details of all user with specified firstname
+sort the details of all user in following manner: 
+     Sorting was to be done according to firstname. If firstname is same for any two user  then sorting is done by their lastname.
+
+Extended goals:
+exits the program.
+save the details of the user in file.
+load the details from the file and save it in the datastruture.
+
+As I said Extended goals were optional and were only to be done once you have completed with your GOALS. I have managed to do two of the extended goals.
+
+Q2. It was something like we have to transfer some data of two threads over TCP/IP layer and show the result. I havent read the whole question. The person who did this will update this part.
+
+Q3. 
+A Producer consumer problem with the following conditions and goals:
+1. There should be 2 threads in the program, one for producer and other for consumer.
+2. The producer thread should be continuously waiting for the console input.
+3. A input is a series of alphabets(a-z|A-Z) and each input terminates with a '\n'.
+4. For each input the producer sends that input to the consumer thread and the consumer prints that input string.
+5. The consumer thread after printing the input string , reverses that string and sends it to the producer which prints that reversed string.
+6. The program terminates with a input string as "quit".
+*We were allowed to unix man pages , internet was disconnected. 
+
+Around 7 were selected for further face to face interviews.
+TECH INTERVIEW : We were asked 4-5 questions on algorithmic puzzles.It was simple.trust me.
+OS INTERVIEW : Questions were : 1. Two threads were given. He asked whether there was mutual exclusion between them ? There wasnt..I was required to give the correct code where mutual exclusion exists. 2. Write code to detect whether compiler/machine is little endian or big-endian. 3. Whats the difference between a 32-bit and 64-bit machine?  Two more small questions.
+ 3rd Interview:  He started with asking about projects I had done. Then he had gone deep into the  OOPS particularly in inheritance and virtual functions. I do not remember any specific question.
+Then it finally ended with a HR interview.
