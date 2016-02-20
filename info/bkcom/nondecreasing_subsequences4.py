@@ -30,5 +30,20 @@ def nondecreasing_subsequences(my_list):
 
 	print final_list
 
+def nondecreasing_subsequences(my_list):
+	counter = 0
+	my_dict = {}
+	initial_num = my_list.pop(0)
+	my_dict[counter] = [initial_num]
+	for i in my_list:
+		if my_dict[counter][-1] <= i:
+			my_dict[counter] = my_dict.get(counter) + [i]
+		else:
+			counter += 1
+			my_dict[counter] = [i]
+
+	print my_dict.values()		
+
+
 
 nondecreasing_subsequences(a)

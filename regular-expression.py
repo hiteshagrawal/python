@@ -38,7 +38,7 @@ print a.groups()
 ## \. will match .  
 ##\d{2} , matches two digit
 ##[0-9]  , self explaininatory
-##[0-9]{1,3} , matches 0 to 9 for maximum 3 times and min 0 times
+##[0-9]{1,3} , matches 0 to 9 for maximum 3 times and min 1 times
 
 ## Now see how () affects the pattern matching 
 ## a = re.findall(r"(\d\d)\.(\d{2})\.([0-9][0-9])\.([0-9]{1,3})", arp)  ## Will do all th matching patterns 
