@@ -22,6 +22,7 @@ for i in range(5):
 print threads
 for th in threads:
     th.join()   ## join method for threading class Waits for thread to terminate
+print threads
 
 print "Now running each function seperately"
 ### Now normal function calling

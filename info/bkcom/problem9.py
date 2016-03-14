@@ -29,11 +29,12 @@ def word_count():
 			my_dict[word] = my_dict.get(word, 0) + 1
 	lines_words = list(my_dict.items())
 	fh.close() 
-	#print my_dict
+	print my_dict
+	print lines_words
 	for k,v in lines_words:
-		new_list.append((v,k))
-	#print new_list
+		new_list.append((v,k))	
 	new_list.sort()
+	print new_list
 	my_rank = len(new_list)
 	for i in range(len(new_list)):
 		print my_rank, "-" , new_list[i][1] , "(times: %d) " %(new_list[i][0])

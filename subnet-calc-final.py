@@ -1,3 +1,4 @@
+#!/usr/bin/python        
         ############# Application #1 - Part #1 #############
 
 import random
