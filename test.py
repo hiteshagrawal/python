@@ -11,3 +11,14 @@ def f2():
 
 
 f2()
+
+a = "networking"
+n = ""
+for i in a:
+	n += i + " "
+	#print n
+print n	
+print " Printing lambda output"
+print reduce(lambda a, b: a + " " + b, "networking")
+print "Printing join output"
+print " ".join(list(a))

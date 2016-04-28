@@ -1,0 +1,23 @@
+https://classroom.udacity.com/courses/ud036/lessons/1004409226/concepts/9944901000923
+
+>>> import turtle
+>>> window = turtle.Screen()
+2016-04-13 09:41:42.994 python[521:10458] setCanCycle: is deprecated.  Please use setCollectionBehavior instead
+2016-04-13 09:41:43.011 python[521:10458] setCanCycle: is deprecated.  Please use setCollectionBehavior instead
+>>> window.bgcolor("red")
+>>> brad = turtle.Turtle()
+>>> brad.shape("turtle")
+>>> brad.color("yellow")
+>>> brad.speed(2)
+>>> brad.forward(100)
+>>> brad.right(90)
+>>> brad.forward(100)
+>>> brad.right(90)
+>>> brad.forward(100)
+>>> brad.right(90)
+>>> brad.forward(100)
+>>> angie = turtle.Turtle()
+>>> angie.shape("arrow")
+>>> angie.color("Pink")
+>>> angie.circle(100)
+>>> 
