@@ -1,0 +1,8 @@
+#!/usr/bin/python
+
+fh = open('mbox.txt')
+print type(fh)
+for line in fh:
+	print line
+
+fh.close()	

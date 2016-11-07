@@ -38,3 +38,33 @@ class FootballFan(PartyAnimal):
 if __name__ == '__main__':
 	ac = FootballFan("Nidhi")
 	ac.touchdown()
+
+class CricketFan(PartyAnimal):
+	def __init__(self,nam,score):
+		print("CricketFan Constructed")
+		PartyAnimal.__init__(self,nam)
+		self.score = score
+
+	def cricketscore(self):
+		self.score += 1
+		print(self.name, "runs", self.score)
+
+Avni = CricketFan("Avni",5)
+Avni.cricketscore()		
+		
+class HockeyFan(PartyAnimal):
+	#Exception AttributeError: "HockeyFan instance has no attribute 'name'" 
+	#in <bound method HockeyFan.__del__ of <__main__.HockeyFan instance at 0x1004dbdd0>> ignored
+	def __init__(self, nam, hscore):
+		print("HockeyFan Constructed")
+		PartyAnimal.__init__(self,nam)
+		self.hscore = int(hscore)
+
+	def hockeyscore(self):
+		self.hscore += 1
+		print "hockeyscore", self.hscore
+
+
+yashvi = HockeyFan("Yashvi", 2)
+yashvi.hockeyscore()		
+		

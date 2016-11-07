@@ -9,7 +9,7 @@ import csv
 
 outcomes = Counter()
 
-f = open('../../data/food.csv', 'r')
+f = open('../food.csv', 'r')
 for row in csv.DictReader(f):
     result = row['Results']
     outcomes[result] += 1
@@ -31,3 +31,5 @@ for result, count in outcomes.most_common():
 import pylab
 pylab.pie(pie_parts, labels=labels, autopct='%0.1f%%')
 pylab.show()
+
+f.close()

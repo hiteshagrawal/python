@@ -8,7 +8,7 @@ working_list = list()
 while True:
     # handle the edge cases
     inp = raw_input('Enter a number or "done"\n')
-    if inp == "done":
+    if inp.lower() == "done":
         # check for empty list    
         if len(working_list) < 1:
             working_list.append("None")
