@@ -1,0 +1,83 @@
+{
+    "odata.metadata": "http://datamall2.mytransport.sg/ltaodataservice/$metadata#IncidentSet", 
+    "value": [
+        {
+            "Latitude": 1.384120599288692, 
+            "Message": "(18/7)17:53 Obstacle on TPE (towards PIE) before KPE Exit. Avoid lane 1.", 
+            "Type": "Obstacle", 
+            "Longitude": 103.91588740533798
+        }, 
+        {
+            "Latitude": 1.3456356910590703, 
+            "Message": "(18/7)17:41 Heavy Traffic on AYE (towards Tuas) after Tuas West Dr Exit.", 
+            "Type": "Heavy Traffic", 
+            "Longitude": 103.63960285397465
+        }, 
+        {
+            "Latitude": 1.2828397695483873, 
+            "Message": "(18/7)17:41 Heavy Traffic on Church Street (towards Cecil Street) after Market Street.", 
+            "Type": "Heavy Traffic", 
+            "Longitude": 103.85023222770589
+        }, 
+        {
+            "Latitude": 1.4368148792239188, 
+            "Message": "(18/7)17:39 Heavy Traffic on BKE (towards Woodlands) at Woodlands Rd Exit.", 
+            "Type": "Heavy Traffic", 
+            "Longitude": 103.76843008193963
+        }, 
+        {
+            "Latitude": 1.2846589971281344, 
+            "Message": "(18/7)17:32 Heavy Traffic on AYE (towards MCE) between Buona Vista Exit and Alexandra Rd Exit.", 
+            "Type": "Heavy Traffic", 
+            "Longitude": 103.79984204993289
+        }, 
+        {
+            "Latitude": 1.3241499128639578, 
+            "Message": "(18/7)17:24 Heavy Traffic on AYE (towards MCE) at Jurong Town Hall Rd Exit.", 
+            "Type": "Heavy Traffic", 
+            "Longitude": 103.74320915146934
+        }, 
+        {
+            "Latitude": 1.3905908739132127, 
+            "Message": "(18/7)17:22 Heavy Traffic on KJE (towards BKE) at BKE(Woodlands) Exit.", 
+            "Type": "Heavy Traffic", 
+            "Longitude": 103.77197444801354
+        }, 
+        {
+            "Latitude": 1.3957516354353423, 
+            "Message": "(18/7)17:08 Vehicle breakdown on SLE (towards CTE) after Lentor Ave Exit.", 
+            "Type": "Vehicle breakdown", 
+            "Longitude": 103.83942155502795
+        }, 
+        {
+            "Latitude": 1.3338355988032597, 
+            "Message": "(18/7)17:07 Heavy Traffic on PIE (towards Changi Airport) at Lornie Rd Exit.", 
+            "Type": "Heavy Traffic", 
+            "Longitude": 103.81360800991493
+        }, 
+        {
+            "Latitude": 1.3029717164528596, 
+            "Message": "(18/7)17:01 Roadworks on Marine Parade Central (towards Marine Drive) after Marine Parade Road. Avoid right lane.", 
+            "Type": "Roadwork", 
+            "Longitude": 103.90716350037843
+        }, 
+        {
+            "Latitude": 1.421220045740045, 
+            "Message": "(18/7)16:34 Heavy Traffic on SLE (towards BKE) at Woodlands Ave 12 Exit.", 
+            "Type": "Heavy Traffic", 
+            "Longitude": 103.79701851571828
+        }, 
+        {
+            "Latitude": 1.3170664060620567, 
+            "Message": "(18/7)15:34 Roadworks on Sims Avenue (toward Changi) after Paya Lebar Road. Avoid right lane.", 
+            "Type": "Roadwork", 
+            "Longitude": 103.8932360931342
+        }, 
+        {
+            "Latitude": 1.4287667802159174, 
+            "Message": "(18/7)10:59 Roadworks on Woodlands Ind Park D St 1 (towards Woodlands Industrial Park D Street2) after Woodlands Avenue 3. Avoid right lane.", 
+            "Type": "Roadwork", 
+            "Longitude": 103.7659695227207
+        }
+    ]
+}

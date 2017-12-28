@@ -1,0 +1,11 @@
+Google geoapi tutorial
+https://www.youtube.com/watch?v=kWncnBBxoJ4
+search using flask and then send that over to google url
+
+In this series, you are taught how to plot on a map with python and do geographical plotting with the matplotlib extension called basemap.
+https://www.youtube.com/watch?v=E6gvtfQHJUs
+
+use this
+https://peak5390.wordpress.com/2012/12/08/matplotlib-basemap-tutorial-plotting-points-on-a-simple-map/
+for hovering pop up
+https://stackoverflow.com/questions/11537374/matplotlib-basemap-popup-box

@@ -1,5 +1,6 @@
 def extendList(val, list=[]):
     list.append(val)
+    #print list
     return list
 
 list1 = extendList(10)
